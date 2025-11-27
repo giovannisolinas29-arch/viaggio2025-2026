@@ -1,0 +1,142 @@
+/* Reset di base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    /* Sfondo scuro moderno */
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+    flex-grow: 1;
+}
+
+header {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+/* Stile delle "Card" dei voli */
+.flight-card {
+    background: rgba(255, 255, 255, 0.1); /* Effetto vetro semitrasparente */
+    backdrop-filter: blur(10px); /* Sfocatura sfondo */
+    border-radius: 20px;
+    padding: 25px;
+    margin-bottom: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.flight-card:hover {
+    transform: translateY(-5px);
+}
+
+.route {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.airport {
+    font-weight: 700;
+    font-size: 1.5rem;
+    background-color: #4facfe; /* Colore accento */
+    padding: 5px 15px;
+    border-radius: 8px;
+    color: #fff;
+}
+
+.arrow {
+    font-size: 1.5rem;
+    color: #4facfe;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+.details {
+    color: #ccc;
+    margin-bottom: 25px;
+    font-size: 0.9rem;
+}
+
+/* Contenitore del conto alla rovescia */
+.countdown-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Le singole caselle del tempo (GG, HH, MM, SS) */
+.time-box {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 15px 10px;
+    border-radius: 12px;
+    min-width: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid rgba(79, 172, 254, 0.3);
+}
+
+/* I numeri grandi */
+.time-box span {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #4facfe;
+    display: block;
+}
+
+/* Le etichette piccole (Days, Hours...) */
+.time-box {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #aaa;
+}
+
+/* Adattamento per schermi piccoli */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+    .countdown-container {
+        gap: 10px;
+    }
+    .time-box {
+        min-width: 55px;
+        padding: 10px 5px;
+    }
+    .time-box span {
+        font-size: 1.4rem;
+    }
+}
