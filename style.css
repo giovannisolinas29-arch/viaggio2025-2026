@@ -8,8 +8,8 @@
 /* 1. SFONDO E STILE BODY AGGIORNATI */
 body {
     font-family: 'Montserrat', sans-serif;
-    /* Immagine di sfondo */
-    background-image: url('images/thailand-bg.jpg'); 
+    /* Immagine di sfondo usando il nome che hai caricato */
+    background-image: url('background-booking.jpg'); 
     background-size: cover;
     background-attachment: fixed; /* L'immagine non scorre */
     background-position: center;
@@ -29,7 +29,7 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Overlay nero semitrasparente */
+    background-color: rgba(0, 0, 0, 0.6); /* Overlay nero più scuro */
     z-index: -1;
 }
 
@@ -64,15 +64,15 @@ header h1 {
 }
 
 .animated-header {
-    animation: slideIn 1s ease-out 0.5s forwards; /* 1 secondo di animazione, ritardo di 0.5s, rimane alla fine */
-    opacity: 0; /* Inizia invisibile */
+    animation: slideIn 1s ease-out 0.5s forwards; 
+    opacity: 0; 
 }
 
 
 /* Stile delle "Card" dei voli */
 .flight-card {
-    background: rgba(255, 255, 255, 0.15); /* Più trasparente per far vedere lo sfondo */
-    backdrop-filter: blur(12px); /* Sfocatura sfondo aumentata */
+    background: rgba(255, 255, 255, 0.15); 
+    backdrop-filter: blur(12px); 
     border-radius: 20px;
     padding: 25px;
     margin-bottom: 30px;
@@ -112,19 +112,21 @@ h2 {
     margin-bottom: 10px;
 }
 
-.details {
-    color: #e0e0e0;
-    margin-bottom: 25px;
-    font-size: 0.9rem;
-}
-
 /* 3. EVIDENZIAZIONE DATI CHIAVE */
-.highlight-details {
-    font-size: 1.1rem; /* Rende la riga leggermente più grande */
+.details {
+    /* Stile della riga completa */
+    font-size: 1.1rem; 
     font-weight: 700;
     color: #ffffff; /* Testo bianco brillante */
+    margin-bottom: 25px;
     padding: 5px 0;
-    border-bottom: 2px solid #4facfe; /* Linea blu sotto la data */
+    /* Linea blu sotto i dettagli */
+    border-bottom: 2px solid #4facfe; 
+}
+
+/* Rimuovi l'evidenziazione temporanea */
+.details b { 
+    font-weight: inherit; /* Nessun grassetto extra */
 }
 
 /* Contenitore del conto alla rovescia (immutato) */
@@ -149,7 +151,7 @@ h2 {
 /* I numeri grandi (immutato) */
 .time-box span {
     font-size: 1.8rem;
-    font-weight: 700;
+    font-weight: 900; /* Ancora più grassetto */
     color: #4facfe;
     display: block;
 }
